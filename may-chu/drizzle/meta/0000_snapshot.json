@@ -1,0 +1,1030 @@
+{
+  "id": "a20fe379-5a63-484f-b8b2-0713a5db5ccf",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.bo_luyen_tap": {
+      "name": "bo_luyen_tap",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "tieu_de": {
+          "name": "tieu_de",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nut_pham_vi_id": {
+          "name": "nut_pham_vi_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "thoi_gian_phut": {
+          "name": "thoi_gian_phut",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "trang_thai": {
+          "name": "trang_thai",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'CONG_BO'"
+        },
+        "da_khoa": {
+          "name": "da_khoa",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "nhan_ban_tu_id": {
+          "name": "nhan_ban_tu_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nguoi_tao_id": {
+          "name": "nguoi_tao_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "bo_luyen_tap_nut_pham_vi_id_nut_kien_thuc_id_fk": {
+          "name": "bo_luyen_tap_nut_pham_vi_id_nut_kien_thuc_id_fk",
+          "tableFrom": "bo_luyen_tap",
+          "tableTo": "nut_kien_thuc",
+          "columnsFrom": [
+            "nut_pham_vi_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "bo_luyen_tap_nhan_ban_tu_id_bo_luyen_tap_id_fk": {
+          "name": "bo_luyen_tap_nhan_ban_tu_id_bo_luyen_tap_id_fk",
+          "tableFrom": "bo_luyen_tap",
+          "tableTo": "bo_luyen_tap",
+          "columnsFrom": [
+            "nhan_ban_tu_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "bo_luyen_tap_nguoi_tao_id_nguoi_dung_id_fk": {
+          "name": "bo_luyen_tap_nguoi_tao_id_nguoi_dung_id_fk",
+          "tableFrom": "bo_luyen_tap",
+          "tableTo": "nguoi_dung",
+          "columnsFrom": [
+            "nguoi_tao_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "ck_bo_thoi_gian": {
+          "name": "ck_bo_thoi_gian",
+          "value": "thoi_gian_phut > 0"
+        },
+        "ck_bo_trang_thai": {
+          "name": "ck_bo_trang_thai",
+          "value": "trang_thai IN ('NHAP', 'CONG_BO', 'AN')"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.cau_da_lam": {
+      "name": "cau_da_lam",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "luot_lam_id": {
+          "name": "luot_lam_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "thu_tu": {
+          "name": "thu_tu",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phien_ban_id": {
+          "name": "phien_ban_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tra_loi": {
+          "name": "tra_loi",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diem": {
+          "name": "diem",
+          "type": "numeric(4, 2)",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "cau_da_lam_luot_lam_id_luot_lam_bai_id_fk": {
+          "name": "cau_da_lam_luot_lam_id_luot_lam_bai_id_fk",
+          "tableFrom": "cau_da_lam",
+          "tableTo": "luot_lam_bai",
+          "columnsFrom": [
+            "luot_lam_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "cau_da_lam_phien_ban_id_phien_ban_cau_hoi_id_fk": {
+          "name": "cau_da_lam_phien_ban_id_phien_ban_cau_hoi_id_fk",
+          "tableFrom": "cau_da_lam",
+          "tableTo": "phien_ban_cau_hoi",
+          "columnsFrom": [
+            "phien_ban_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "uq_cau_da_lam": {
+          "name": "uq_cau_da_lam",
+          "nullsNotDistinct": false,
+          "columns": [
+            "luot_lam_id",
+            "thu_tu"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.cau_hoi": {
+      "name": "cau_hoi",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "ma": {
+          "name": "ma",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nut_id": {
+          "name": "nut_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nut_cap": {
+          "name": "nut_cap",
+          "type": "varchar(10)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'DANG'"
+        },
+        "phien_ban_hien_tai_id": {
+          "name": "phien_ban_hien_tai_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "bi_an": {
+          "name": "bi_an",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true,
+          "default": false
+        },
+        "nguoi_tao_id": {
+          "name": "nguoi_tao_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "cau_hoi_phien_ban_hien_tai_id_phien_ban_cau_hoi_id_fk": {
+          "name": "cau_hoi_phien_ban_hien_tai_id_phien_ban_cau_hoi_id_fk",
+          "tableFrom": "cau_hoi",
+          "tableTo": "phien_ban_cau_hoi",
+          "columnsFrom": [
+            "phien_ban_hien_tai_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "cau_hoi_nguoi_tao_id_nguoi_dung_id_fk": {
+          "name": "cau_hoi_nguoi_tao_id_nguoi_dung_id_fk",
+          "tableFrom": "cau_hoi",
+          "tableTo": "nguoi_dung",
+          "columnsFrom": [
+            "nguoi_tao_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "fk_cau_hoi_nut_dang": {
+          "name": "fk_cau_hoi_nut_dang",
+          "tableFrom": "cau_hoi",
+          "tableTo": "nut_kien_thuc",
+          "columnsFrom": [
+            "nut_id",
+            "nut_cap"
+          ],
+          "columnsTo": [
+            "id",
+            "cap"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "cau_hoi_ma_unique": {
+          "name": "cau_hoi_ma_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "ma"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "ck_cau_hoi_nut_cap": {
+          "name": "ck_cau_hoi_nut_cap",
+          "value": "nut_cap = 'DANG'"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.cau_trong_bo": {
+      "name": "cau_trong_bo",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "bo_id": {
+          "name": "bo_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phien_ban_id": {
+          "name": "phien_ban_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "thu_tu": {
+          "name": "thu_tu",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "cau_trong_bo_bo_id_bo_luyen_tap_id_fk": {
+          "name": "cau_trong_bo_bo_id_bo_luyen_tap_id_fk",
+          "tableFrom": "cau_trong_bo",
+          "tableTo": "bo_luyen_tap",
+          "columnsFrom": [
+            "bo_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "cau_trong_bo_phien_ban_id_phien_ban_cau_hoi_id_fk": {
+          "name": "cau_trong_bo_phien_ban_id_phien_ban_cau_hoi_id_fk",
+          "tableFrom": "cau_trong_bo",
+          "tableTo": "phien_ban_cau_hoi",
+          "columnsFrom": [
+            "phien_ban_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "uq_cau_trong_bo": {
+          "name": "uq_cau_trong_bo",
+          "nullsNotDistinct": false,
+          "columns": [
+            "bo_id",
+            "thu_tu"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.lo_nhap_cau_hoi": {
+      "name": "lo_nhap_cau_hoi",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "ten_file": {
+          "name": "ten_file",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nguoi_nhap_id": {
+          "name": "nguoi_nhap_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "tong_so": {
+          "name": "tong_so",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "so_thanh_cong": {
+          "name": "so_thanh_cong",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bao_cao_loi": {
+          "name": "bao_cao_loi",
+          "type": "jsonb",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'[]'::jsonb"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "lo_nhap_cau_hoi_nguoi_nhap_id_nguoi_dung_id_fk": {
+          "name": "lo_nhap_cau_hoi_nguoi_nhap_id_nguoi_dung_id_fk",
+          "tableFrom": "lo_nhap_cau_hoi",
+          "tableTo": "nguoi_dung",
+          "columnsFrom": [
+            "nguoi_nhap_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {},
+      "isRLSEnabled": false
+    },
+    "public.lua_chon": {
+      "name": "lua_chon",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "phien_ban_id": {
+          "name": "phien_ban_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ky_hieu": {
+          "name": "ky_hieu",
+          "type": "char(1)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "noi_dung": {
+          "name": "noi_dung",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "la_dap_an_dung": {
+          "name": "la_dap_an_dung",
+          "type": "boolean",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "lua_chon_phien_ban_id_phien_ban_cau_hoi_id_fk": {
+          "name": "lua_chon_phien_ban_id_phien_ban_cau_hoi_id_fk",
+          "tableFrom": "lua_chon",
+          "tableTo": "phien_ban_cau_hoi",
+          "columnsFrom": [
+            "phien_ban_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "uq_lua_chon": {
+          "name": "uq_lua_chon",
+          "nullsNotDistinct": false,
+          "columns": [
+            "phien_ban_id",
+            "ky_hieu"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "ck_ky_hieu": {
+          "name": "ck_ky_hieu",
+          "value": "ky_hieu IN ('A', 'B', 'C', 'D', 'a', 'b', 'c', 'd')"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.luot_lam_bai": {
+      "name": "luot_lam_bai",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "hoc_sinh_id": {
+          "name": "hoc_sinh_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "bo_id": {
+          "name": "bo_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "lan_thu": {
+          "name": "lan_thu",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "trang_thai": {
+          "name": "trang_thai",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'DANG_LAM'"
+        },
+        "bat_dau_luc": {
+          "name": "bat_dau_luc",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "han_nop": {
+          "name": "han_nop",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nop_luc": {
+          "name": "nop_luc",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "tong_diem": {
+          "name": "tong_diem",
+          "type": "numeric(5, 2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "diem_thang_10": {
+          "name": "diem_thang_10",
+          "type": "numeric(4, 2)",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "so_cau_dung_het": {
+          "name": "so_cau_dung_het",
+          "type": "smallint",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "ma_yeu_cau": {
+          "name": "ma_yeu_cau",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "uq_luot_dang_lam": {
+          "name": "uq_luot_dang_lam",
+          "columns": [
+            {
+              "expression": "hoc_sinh_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            },
+            {
+              "expression": "bo_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "where": "trang_thai = 'DANG_LAM'",
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "luot_lam_bai_hoc_sinh_id_nguoi_dung_id_fk": {
+          "name": "luot_lam_bai_hoc_sinh_id_nguoi_dung_id_fk",
+          "tableFrom": "luot_lam_bai",
+          "tableTo": "nguoi_dung",
+          "columnsFrom": [
+            "hoc_sinh_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        },
+        "luot_lam_bai_bo_id_bo_luyen_tap_id_fk": {
+          "name": "luot_lam_bai_bo_id_bo_luyen_tap_id_fk",
+          "tableFrom": "luot_lam_bai",
+          "tableTo": "bo_luyen_tap",
+          "columnsFrom": [
+            "bo_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "luot_lam_bai_ma_yeu_cau_unique": {
+          "name": "luot_lam_bai_ma_yeu_cau_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "ma_yeu_cau"
+          ]
+        },
+        "uq_luot_lan_thu": {
+          "name": "uq_luot_lan_thu",
+          "nullsNotDistinct": false,
+          "columns": [
+            "hoc_sinh_id",
+            "bo_id",
+            "lan_thu"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "ck_luot_trang_thai": {
+          "name": "ck_luot_trang_thai",
+          "value": "trang_thai IN ('DANG_LAM', 'DA_NOP', 'HET_GIO')"
+        },
+        "ck_luot_diem": {
+          "name": "ck_luot_diem",
+          "value": "diem_thang_10 IS NULL OR diem_thang_10 BETWEEN 0 AND 10"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.nguoi_dung": {
+      "name": "nguoi_dung",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "email": {
+          "name": "email",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "mat_khau_bam": {
+          "name": "mat_khau_bam",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ho_ten": {
+          "name": "ho_ten",
+          "type": "varchar(100)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "vai_tro": {
+          "name": "vai_tro",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "trang_thai": {
+          "name": "trang_thai",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'HOAT_DONG'"
+        },
+        "ngay_tao": {
+          "name": "ngay_tao",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "nguoi_dung_email_unique": {
+          "name": "nguoi_dung_email_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "email"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "ck_nguoi_dung_vai_tro": {
+          "name": "ck_nguoi_dung_vai_tro",
+          "value": "vai_tro IN ('HOC_SINH', 'QUAN_TRI')"
+        },
+        "ck_nguoi_dung_trang_thai": {
+          "name": "ck_nguoi_dung_trang_thai",
+          "value": "trang_thai IN ('HOAT_DONG', 'BI_KHOA')"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.nut_kien_thuc": {
+      "name": "nut_kien_thuc",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "nut_cha_id": {
+          "name": "nut_cha_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "cap": {
+          "name": "cap",
+          "type": "varchar(10)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ma": {
+          "name": "ma",
+          "type": "varchar(30)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "ten": {
+          "name": "ten",
+          "type": "varchar(255)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "thu_tu": {
+          "name": "thu_tu",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "default": 1
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "nut_kien_thuc_nut_cha_id_nut_kien_thuc_id_fk": {
+          "name": "nut_kien_thuc_nut_cha_id_nut_kien_thuc_id_fk",
+          "tableFrom": "nut_kien_thuc",
+          "tableTo": "nut_kien_thuc",
+          "columnsFrom": [
+            "nut_cha_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "nut_kien_thuc_ma_unique": {
+          "name": "nut_kien_thuc_ma_unique",
+          "nullsNotDistinct": false,
+          "columns": [
+            "ma"
+          ]
+        },
+        "uq_nut_id_cap": {
+          "name": "uq_nut_id_cap",
+          "nullsNotDistinct": false,
+          "columns": [
+            "id",
+            "cap"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "ck_nut_cap": {
+          "name": "ck_nut_cap",
+          "value": "cap IN ('MON', 'LOP', 'CHUONG', 'BAI', 'DANG')"
+        }
+      },
+      "isRLSEnabled": false
+    },
+    "public.phien_ban_cau_hoi": {
+      "name": "phien_ban_cau_hoi",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "cau_hoi_id": {
+          "name": "cau_hoi_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "so_phien_ban": {
+          "name": "so_phien_ban",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loai_cau": {
+          "name": "loai_cau",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "muc_do": {
+          "name": "muc_do",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "de_bai": {
+          "name": "de_bai",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "loi_giai": {
+          "name": "loi_giai",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "''"
+        },
+        "trang_thai": {
+          "name": "trang_thai",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'NHAP'"
+        },
+        "nguon": {
+          "name": "nguon",
+          "type": "varchar(20)",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "'THU_CONG'"
+        },
+        "lo_nhap_id": {
+          "name": "lo_nhap_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nguoi_tao_id": {
+          "name": "nguoi_tao_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "nguoi_duyet_id": {
+          "name": "nguoi_duyet_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "duyet_luc": {
+          "name": "duyet_luc",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "phien_ban_cau_hoi_cau_hoi_id_cau_hoi_id_fk": {
+          "name": "phien_ban_cau_hoi_cau_hoi_id_cau_hoi_id_fk",
+          "tableFrom": "phien_ban_cau_hoi",
+          "tableTo": "cau_hoi",
+          "columnsFrom": [
+            "cau_hoi_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "restrict",
+          "onUpdate": "no action"
+        },
+        "phien_ban_cau_hoi_lo_nhap_id_lo_nhap_cau_hoi_id_fk": {
+          "name": "phien_ban_cau_hoi_lo_nhap_id_lo_nhap_cau_hoi_id_fk",
+          "tableFrom": "phien_ban_cau_hoi",
+          "tableTo": "lo_nhap_cau_hoi",
+          "columnsFrom": [
+            "lo_nhap_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "phien_ban_cau_hoi_nguoi_tao_id_nguoi_dung_id_fk": {
+          "name": "phien_ban_cau_hoi_nguoi_tao_id_nguoi_dung_id_fk",
+          "tableFrom": "phien_ban_cau_hoi",
+          "tableTo": "nguoi_dung",
+          "columnsFrom": [
+            "nguoi_tao_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        },
+        "phien_ban_cau_hoi_nguoi_duyet_id_nguoi_dung_id_fk": {
+          "name": "phien_ban_cau_hoi_nguoi_duyet_id_nguoi_dung_id_fk",
+          "tableFrom": "phien_ban_cau_hoi",
+          "tableTo": "nguoi_dung",
+          "columnsFrom": [
+            "nguoi_duyet_id"
+          ],
+          "columnsTo": [
+            "id"
+          ],
+          "onDelete": "no action",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {
+        "uq_phien_ban": {
+          "name": "uq_phien_ban",
+          "nullsNotDistinct": false,
+          "columns": [
+            "cau_hoi_id",
+            "so_phien_ban"
+          ]
+        }
+      },
+      "policies": {},
+      "checkConstraints": {
+        "ck_pb_loai": {
+          "name": "ck_pb_loai",
+          "value": "loai_cau IN ('TRAC_NGHIEM', 'DUNG_SAI')"
+        },
+        "ck_pb_muc_do": {
+          "name": "ck_pb_muc_do",
+          "value": "muc_do IN ('BIET', 'HIEU', 'VAN_DUNG')"
+        },
+        "ck_pb_trang_thai": {
+          "name": "ck_pb_trang_thai",
+          "value": "trang_thai IN ('NHAP', 'DA_DUYET', 'DA_THAY_THE')"
+        },
+        "ck_pb_nguon": {
+          "name": "ck_pb_nguon",
+          "value": "nguon IN ('THU_CONG', 'NHAP_FILE')"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

@@ -26,3 +26,11 @@ export class HetGio implements ITrangThaiLuotLam {
   kiemTraDuocTraLoi(): void { throw new LoiHetGio('Đã hết giờ làm bài'); }
   daKetThuc(): boolean { return true; }
 }
+
+export function taoTrangThai(ten: TenTrangThai): ITrangThaiLuotLam {
+  switch (ten) {
+    case 'DANG_LAM': return new DangLam();
+    case 'DA_NOP': return new DaNop();
+    case 'HET_GIO': return new HetGio();
+  }
+}

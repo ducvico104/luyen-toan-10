@@ -4,8 +4,13 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "kiem-tra-kieu": "tsc --noEmit"
+    "test": "jest --testPathIgnorePatterns tests/kho",
+    "test:kho": "jest tests/kho --runInBand",
+    "kiem-tra-kieu": "tsc --noEmit",
+    "db:sinh": "drizzle-kit generate",
+    "db:chay": "drizzle-kit migrate",
+    "db:xem": "drizzle-kit studio",
+    "du-lieu-mau": "tsx src/ha-tang/csdl/du-lieu-mau.ts"
   },
   "keywords": [],
   "author": "",
@@ -14,8 +19,16 @@
   "devDependencies": {
     "@types/jest": "^29.5.14",
     "@types/node": "^26.6.6",
+    "@types/pg": "^8.23.1",
+    "drizzle-kit": "^0.31.11",
     "jest": "^29.7.0",
     "ts-jest": "^29.4.15",
+    "tsx": "^4.23.15",
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "drizzle-orm": "^0.45.4",
+    "pg": "^8.23.1"
   }
 }
