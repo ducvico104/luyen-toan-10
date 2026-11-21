@@ -8,7 +8,7 @@ export abstract class NguoiDung {
 
     constructor(
         readonly id : string,
-        readonly emai : string,
+        readonly email : string,
         private _matKhauBam : string, //Chỉ lưu mật khẩu ĐÃ BĂM, việc băm do tầng dịch vụ làm
         private _hoTen :string,
         trangThai : TrangThaiTaiKhoan = 'HOAT_DONG',
