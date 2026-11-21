@@ -1,0 +1,582 @@
+[
+  {
+    "goc": "Phần I – Câu 1",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "BIET",
+    "de": "Câu nào sau đây không là mệnh đề?",
+    "loiGiai": "“Bạn học giỏi quá!” là câu cảm thán, không khẳng định được đúng hay sai nên không là mệnh đề. A là mệnh đề đúng; B, C là mệnh đề sai.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "Tam giác đều là tam giác có ba cạnh bằng nhau.",
+        "dung": false
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "$3 < 1$.",
+        "dung": false
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "$4 - 5 = 1$.",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "Bạn học giỏi quá!",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 2",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "BIET",
+    "de": "Câu nào trong các câu sau không phải là mệnh đề?",
+    "loiGiai": "A là câu hỏi nên không là mệnh đề. B, C là mệnh đề sai; D là mệnh đề đúng.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "$\\pi$ có phải là một số vô tỉ không?",
+        "dung": true
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "$2 + 2 = 5$.",
+        "dung": false
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "$\\sqrt{2}$ là một số hữu tỉ.",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "$\\dfrac{4}{2} = 2$.",
+        "dung": false
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 3",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "BIET",
+    "de": "Trong các câu sau, câu nào là mệnh đề?",
+    "loiGiai": "A là câu khẳng định (sai, vì $12$ là số chẵn) nên là mệnh đề. B, C là câu hỏi; D là câu mệnh lệnh nên không là mệnh đề.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "$12$ là số tự nhiên lẻ.",
+        "dung": true
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "An học lớp mấy?",
+        "dung": false
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "Các bạn có chăm học không?",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "Các bạn hãy làm bài đi!",
+        "dung": false
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 4",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "HIEU",
+    "de": "Trong các câu sau, có bao nhiêu câu là mệnh đề?\na) Cố lên, sắp đói rồi!\nb) Số $15$ là số nguyên tố.\nc) Tổng các góc của một tam giác là $180^\\circ$.\nd) $x$ là số nguyên dương.",
+    "loiGiai": "b) là mệnh đề (sai), c) là mệnh đề (đúng). a) là câu cảm thán; d) là mệnh đề chứa biến, chưa xác định được đúng hay sai. Vậy có $2$ mệnh đề.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "$3$",
+        "dung": false
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "$2$",
+        "dung": true
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "$4$",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "$1$",
+        "dung": false
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 6",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "BIET",
+    "de": "Phát biểu nào sau đây là một mệnh đề?",
+    "loiGiai": "A, C là câu cảm thán; B là câu hỏi nên không là mệnh đề. D là mệnh đề đúng.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "Mùa thu Hà Nội đẹp quá!",
+        "dung": false
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "Bạn có đi học không?",
+        "dung": false
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "Đề thi môn Toán khó quá!",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "Hà Nội là thủ đô của Việt Nam.",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 9",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "BIET",
+    "de": "Trong các câu sau, câu nào không phải là mệnh đề?",
+    "loiGiai": "A là câu cảm thán nên không là mệnh đề. B là mệnh đề đúng; C, D là mệnh đề sai.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "Buồn ngủ quá!",
+        "dung": true
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "Hình thoi có hai đường chéo vuông góc với nhau.",
+        "dung": false
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "$8$ là số chính phương.",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "Băng Cốc là thủ đô của Mianma.",
+        "dung": false
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 10",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "BIET",
+    "de": "Trong các câu sau, câu nào là mệnh đề?",
+    "loiGiai": "B là câu khẳng định, xác định được đúng hay sai nên là mệnh đề. A, D là câu mệnh lệnh; C là câu hỏi.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "Đi ngủ đi!",
+        "dung": false
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "Trung Quốc là nước đông dân nhất thế giới.",
+        "dung": true
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "Bạn học trường nào?",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "Không được làm việc riêng trong giờ học!",
+        "dung": false
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 11",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "HIEU",
+    "de": "Trong các mệnh đề sau, mệnh đề nào là mệnh đề đúng?",
+    "loiGiai": "A sai: $1 + 3 = 4$ là số chẵn nhưng $1$, $3$ đều lẻ. B sai: $2 \\cdot 3 = 6$ là số chẵn nhưng $3$ lẻ. C sai: tổng hai số lẻ là số chẵn. D đúng: chỉ cần một thừa số chẵn thì tích chẵn, nên tích lẻ khi và chỉ khi cả hai số đều lẻ.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "Tổng của hai số tự nhiên là một số chẵn khi và chỉ khi cả hai số đều là số chẵn.",
+        "dung": false
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "Tích của hai số tự nhiên là một số chẵn khi và chỉ khi cả hai số đều là số chẵn.",
+        "dung": false
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "Tổng của hai số tự nhiên là một số lẻ khi và chỉ khi cả hai số đều là số lẻ.",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "Tích của hai số tự nhiên là một số lẻ khi và chỉ khi cả hai số đều là số lẻ.",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 12",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "HIEU",
+    "de": "Trong các mệnh đề sau, mệnh đề nào đúng?",
+    "loiGiai": "Phương trình $x^2 + 7x - 2 = 0$ có $a \\cdot c = 1 \\cdot (-2) < 0$ nên có $2$ nghiệm trái dấu: B đúng. A sai vì $6\\sqrt{2}$ là số vô tỉ; C sai; D sai vì $\\Delta = 1 - 28 < 0$.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "$6\\sqrt{2}$ là số hữu tỉ.",
+        "dung": false
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "Phương trình $x^2 + 7x - 2 = 0$ có $2$ nghiệm trái dấu.",
+        "dung": true
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "$17$ là số chẵn.",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "Phương trình $x^2 + x + 7 = 0$ có nghiệm.",
+        "dung": false
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 13",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "HIEU",
+    "de": "Cho mệnh đề chứa biến $P(x)$: “$x + 10 \\ge x^2$” với $x$ là số tự nhiên. Mệnh đề nào sau đây sai?",
+    "loiGiai": "$P(1)$: $11 \\ge 1$ đúng; $P(2)$: $12 \\ge 4$ đúng; $P(3)$: $13 \\ge 9$ đúng; $P(4)$: $14 \\ge 16$ sai.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "$P(1)$",
+        "dung": false
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "$P(2)$",
+        "dung": false
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "$P(3)$",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "$P(4)$",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 14",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "HIEU",
+    "de": "Với giá trị nào của $x$ sau đây thì mệnh đề chứa biến $P(x)$: “$x + 1 < x^2$” là đúng?",
+    "loiGiai": "$P(0)$: $1 < 0$ sai; $P(2)$: $3 < 4$ đúng; $P(1)$: $2 < 1$ sai; $P\\left(\\tfrac{1}{2}\\right)$: $\\tfrac{3}{2} < \\tfrac{1}{4}$ sai.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "$x = 0$",
+        "dung": false
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "$x = 2$",
+        "dung": true
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "$x = 1$",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "$x = \\dfrac{1}{2}$",
+        "dung": false
+      }
+    ]
+  },
+  {
+    "goc": "Phần I – Câu 15",
+    "loai": "TRAC_NGHIEM",
+    "mucDo": "BIET",
+    "de": "Trong những câu sau, câu nào là mệnh đề chứa biến?",
+    "loiGiai": "B chứa biến $n$, tính đúng sai phụ thuộc vào $n$ nên là mệnh đề chứa biến. A, C, D đều đã xác định được đúng hay sai nên là mệnh đề.",
+    "luaChon": [
+      {
+        "kyHieu": "A",
+        "noiDung": "$18$ chia hết cho $9$.",
+        "dung": false
+      },
+      {
+        "kyHieu": "B",
+        "noiDung": "$3n$ chia hết cho $9$.",
+        "dung": true
+      },
+      {
+        "kyHieu": "C",
+        "noiDung": "$2109$ là số nguyên tố.",
+        "dung": false
+      },
+      {
+        "kyHieu": "D",
+        "noiDung": "Nếu một số chia hết cho $18$ thì số ấy chia hết cho $9$.",
+        "dung": false
+      }
+    ]
+  },
+  {
+    "goc": "Phần II – Câu 1",
+    "loai": "DUNG_SAI",
+    "mucDo": "BIET",
+    "de": "Xét tính đúng, sai của mỗi mệnh đề sau.",
+    "loiGiai": "a) Đúng: $15 = 3 \\cdot 5$ nên $15$ không là số nguyên tố. b) Sai: tứ giác có hai đường chéo vuông góc chưa chắc là hình thoi (ví dụ hình cánh diều). c) Đúng. d) Sai vì $6 + 81 = 87$.",
+    "luaChon": [
+      {
+        "kyHieu": "a",
+        "noiDung": "$15$ không là số nguyên tố.",
+        "dung": true
+      },
+      {
+        "kyHieu": "b",
+        "noiDung": "Một tứ giác là hình thoi khi và chỉ khi nó có hai đường chéo vuông góc với nhau.",
+        "dung": false
+      },
+      {
+        "kyHieu": "c",
+        "noiDung": "$5 + 19 = 24$.",
+        "dung": true
+      },
+      {
+        "kyHieu": "d",
+        "noiDung": "$6 + 81 = 25$.",
+        "dung": false
+      }
+    ]
+  },
+  {
+    "goc": "Phần II – Câu 2",
+    "loai": "DUNG_SAI",
+    "mucDo": "BIET",
+    "de": "Hãy xác định tính đúng, sai của mỗi mệnh đề sau.",
+    "loiGiai": "a) Sai vì $2010$ không chia hết cho $4$. b) Đúng: $31$ chỉ có hai ước là $1$ và $31$. c) Sai. d) Đúng (định nghĩa hình thoi).",
+    "luaChon": [
+      {
+        "kyHieu": "a",
+        "noiDung": "$A$: “Năm 2010 là năm nhuận”.",
+        "dung": false
+      },
+      {
+        "kyHieu": "b",
+        "noiDung": "$B$: “$31$ là số nguyên tố”.",
+        "dung": true
+      },
+      {
+        "kyHieu": "c",
+        "noiDung": "$P$: “Mùa xuân bắt đầu từ tháng 6 và kết thúc vào tháng 9”.",
+        "dung": false
+      },
+      {
+        "kyHieu": "d",
+        "noiDung": "$Q$: “Hình thoi là tứ giác có bốn cạnh bằng nhau”.",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần II – Câu 3",
+    "loai": "DUNG_SAI",
+    "mucDo": "HIEU",
+    "de": "Xét tính đúng, sai của mỗi mệnh đề sau.",
+    "loiGiai": "a) Đúng. b) Đúng (trường hợp bằng nhau cạnh – góc – cạnh). c) Sai: hai tam giác có hai cặp góc bằng nhau chỉ đồng dạng, chưa chắc bằng nhau. d) Đúng (dấu hiệu chia hết cho $3$).",
+    "luaChon": [
+      {
+        "kyHieu": "a",
+        "noiDung": "Hai góc đối đỉnh thì bằng nhau.",
+        "dung": true
+      },
+      {
+        "kyHieu": "b",
+        "noiDung": "Hai tam giác có hai cặp cạnh bằng nhau kèm giữa một cặp góc bằng nhau thì bằng nhau.",
+        "dung": true
+      },
+      {
+        "kyHieu": "c",
+        "noiDung": "Hai tam giác có hai cặp góc bằng nhau thì bằng nhau.",
+        "dung": false
+      },
+      {
+        "kyHieu": "d",
+        "noiDung": "Một số chia hết cho $3$ khi và chỉ khi tổng các chữ số của nó chia hết cho $3$.",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần II – Câu 4",
+    "loai": "DUNG_SAI",
+    "mucDo": "HIEU",
+    "de": "Cho mệnh đề chứa biến $P(x)$: “$x^2 - x - 2 = 0$” với $x$ là số thực. Xét tính đúng, sai của mỗi khẳng định sau.",
+    "loiGiai": "$x^2 - x - 2 = 0 \\Leftrightarrow x = -1$ hoặc $x = 2$. Vậy $P(-1)$, $P(2)$ là mệnh đề đúng; $P(0)$, $P(1)$ là mệnh đề sai.",
+    "luaChon": [
+      {
+        "kyHieu": "a",
+        "noiDung": "$P(0)$ là mệnh đề đúng.",
+        "dung": false
+      },
+      {
+        "kyHieu": "b",
+        "noiDung": "$P(-1)$ là mệnh đề đúng.",
+        "dung": true
+      },
+      {
+        "kyHieu": "c",
+        "noiDung": "$P(1)$ là mệnh đề đúng.",
+        "dung": false
+      },
+      {
+        "kyHieu": "d",
+        "noiDung": "$P(2)$ là mệnh đề đúng.",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần II – Câu 5",
+    "loai": "DUNG_SAI",
+    "mucDo": "HIEU",
+    "de": "Xét tính đúng, sai của các mệnh đề sau.",
+    "loiGiai": "a) Đúng vì $x^2 - x + 1 = \\left(x - \\tfrac{1}{2}\\right)^2 + \\tfrac{3}{4} > 0$. b) Đúng. c) Sai vì $x^2 + 1 \\ge 1 > 0$. d) Đúng.",
+    "luaChon": [
+      {
+        "kyHieu": "a",
+        "noiDung": "Với mọi số thực $x$, $x^2 - x + 1 > 0$.",
+        "dung": true
+      },
+      {
+        "kyHieu": "b",
+        "noiDung": "$24$ chia hết cho $2$ và cho $12$.",
+        "dung": true
+      },
+      {
+        "kyHieu": "c",
+        "noiDung": "Với mọi số thực $x$, $x^2 + 1 < 0$.",
+        "dung": false
+      },
+      {
+        "kyHieu": "d",
+        "noiDung": "$\\sqrt{5}$ là số vô tỉ.",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần II – Câu 6",
+    "loai": "DUNG_SAI",
+    "mucDo": "HIEU",
+    "de": "Cho biết tính đúng, sai của mỗi mệnh đề sau.",
+    "loiGiai": "a) Đúng. b) Đúng (bất đẳng thức tam giác). c) Sai vì $3$ là số nguyên tố. d) Đúng: trong bốn số tự nhiên liên tiếp luôn có một số chia hết cho $4$.",
+    "luaChon": [
+      {
+        "kyHieu": "a",
+        "noiDung": "$36$ chia hết cho $6$.",
+        "dung": true
+      },
+      {
+        "kyHieu": "b",
+        "noiDung": "Tổng hai cạnh trong một tam giác lớn hơn cạnh thứ ba của tam giác đó.",
+        "dung": true
+      },
+      {
+        "kyHieu": "c",
+        "noiDung": "$3$ là hợp số.",
+        "dung": false
+      },
+      {
+        "kyHieu": "d",
+        "noiDung": "Tích của bốn số tự nhiên liên tiếp luôn chia hết cho $4$.",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần II – Câu 7",
+    "loai": "DUNG_SAI",
+    "mucDo": "VAN_DUNG",
+    "de": "Xét tính đúng, sai của mỗi mệnh đề sau.",
+    "loiGiai": "a) Đúng. b) Đúng: $\\left(\\sqrt{3} - 3\\sqrt{3}\\right)^2 = \\left(-2\\sqrt{3}\\right)^2 = 12$. c) Đúng: $16 = 3 \\cdot 5 + 1$. d) Đúng: nếu $\\sqrt{13 - 2\\sqrt{3}} = r$ là số hữu tỉ thì $13 - 2\\sqrt{3} = r^2$ là số hữu tỉ, vô lí vì $\\sqrt{3}$ là số vô tỉ.",
+    "luaChon": [
+      {
+        "kyHieu": "a",
+        "noiDung": "Trong một tam giác, tổng ba góc bằng $180^\\circ$.",
+        "dung": true
+      },
+      {
+        "kyHieu": "b",
+        "noiDung": "$\\left(\\sqrt{3} - \\sqrt{27}\\right)^2$ là số nguyên.",
+        "dung": true
+      },
+      {
+        "kyHieu": "c",
+        "noiDung": "$16$ chia $3$ dư $1$.",
+        "dung": true
+      },
+      {
+        "kyHieu": "d",
+        "noiDung": "$\\sqrt{13 - 2\\sqrt{3}}$ là số vô tỉ.",
+        "dung": true
+      }
+    ]
+  },
+  {
+    "goc": "Phần II – Câu 8",
+    "loai": "DUNG_SAI",
+    "mucDo": "HIEU",
+    "de": "Xét tính đúng, sai của các mệnh đề sau.",
+    "loiGiai": "a) Sai vì $\\sqrt{6}$ là số vô tỉ. b) Đúng vì $\\Delta = 9 - 20 = -11 < 0$. c) Đúng. d) Đúng vì $\\sqrt{7 + \\sqrt{48}} \\cdot \\sqrt{7 - \\sqrt{48}} = \\sqrt{49 - 48} = 1$.",
+    "luaChon": [
+      {
+        "kyHieu": "a",
+        "noiDung": "$\\sqrt{6}$ không phải là một số vô tỉ.",
+        "dung": false
+      },
+      {
+        "kyHieu": "b",
+        "noiDung": "Phương trình $x^2 + 3x + 5 = 0$ vô nghiệm.",
+        "dung": true
+      },
+      {
+        "kyHieu": "c",
+        "noiDung": "Đồ thị hàm số $y = x^2$ là parabol có đỉnh $O(0;0)$.",
+        "dung": true
+      },
+      {
+        "kyHieu": "d",
+        "noiDung": "$\\sqrt{7 + \\sqrt{48}}$ và $\\sqrt{7 - \\sqrt{48}}$ là hai số nghịch đảo của nhau.",
+        "dung": true
+      }
+    ]
+  }
+]
